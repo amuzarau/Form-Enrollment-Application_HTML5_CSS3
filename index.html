@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Registration Form</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+
+  <body>
+    <h1 id="title">Заявка на обучение</h1>
+    <p id="description">
+      Оставьте заявку на обучение Вашего ребёнка 
+    <p id="description">в Школе программирования
+      "DRONNY"</p>
+    </p>
+
+    <form
+      method="post"
+      action="https://register-demo.freecodecamp.org"
+      id="survey-form"
+    >
+      <fieldset>
+        <legend>Ваша контактная информация</legend>
+        <label for="parent-name"
+          >Имя родителя
+          <input type="text" id="parent-name" placeholder="Александр" requred />
+        </label>
+
+        <label for="parent-surname"
+          >Фамилия родителя
+          <input type="text" id="parent-surname" placeholder="Блок" required />
+        </label>
+
+        <label for="telNo"
+          >Мобильный телефон (в формате 80xx-xxx-xx-xx)
+          <input
+            id="telNo"
+            type="tel"
+            name="telNo"
+            pattern="[0-9]{4}-[0-9]{3}-[0-9]{2}-[0-9]{2}"
+            placeholder="8029-555-77-88"
+            required
+          />
+        </label>
+
+        <label for="email" id="email-label"
+          >E-mail
+          <input
+            type="email"
+            id="email"
+            name="email"
+            placeholder="blok@gmail.com"
+            required
+          />
+        </label>
+      </fieldset>
+
+      <fieldset>
+        <legend>Информация о ребёнке</legend>
+        <label for="name" id="name-label"
+          >Имя ребёнка
+          <input
+            type="text"
+            id="name"
+            name="name"
+            placeholder="Andrei"
+            required
+        /></label>
+        <label for="age"
+          >Возраст ребёнка <input type="number" id="age" min="6" max="17"
+          name="age" placeholder="7" required" /></label
+        >
+        <label for="number" id="number-label"
+          >Класс школы ребёнка
+          <input
+            type="number"
+            id="number"
+            min="1"
+            max="11"
+            placeholder="4"
+            required
+        /></label>
+
+        <legend>Курсы, на которые Вы хотели бы записать ребёнка:</legend>
+        
+        <label for="drone-programming"><input
+          id="drone-programming"
+          type="checkbox"
+          name="drone-programming"
+          value="Программирование дронов"
+          class="inline"
+        /> Программирование дронов</label>
+                
+        <label for="drone-choreography"><input
+          id="drone-choreography"
+          type="checkbox"
+          name="subject"
+          value="drone-choreography"
+        /> Хореография дронов</label>
+
+        <label for="drone-races"><input
+          id="drone-races"
+          type="checkbox"
+          name="subject"
+          value="drone-races"
+        /> Гонки FPV-дронов</label>
+
+        <label for="3dmodelling-printing"><input
+          id="3Dmod-print"
+          type="checkbox"
+          name="subject"
+          value="3dmodelling-printing"
+        /> 3D-моделирование и 3D-печать</label>
+
+        <label for="python-programming"><input
+          id="python-programming"
+          type="checkbox"
+          name="subject"
+          value="python-programming"
+        /> Программирование на Python (Пайтон)</label>
+
+        <label for="scratch-programming"><input
+          id="scratch-programming"
+          type="checkbox"
+          name="subject"
+          value="scratch-programming"> Программирование на Scratch (Скрэтч)</label> 
+
+        <label for="python-dj"><input
+          id="python-dj"
+          type="checkbox"
+          name="subject"
+          value="python-dj"
+        /> Python-диджей (создание музыки на Python)</label>
+
+        <label><input
+          id="javascript-dj"
+          type="checkbox"
+          name="subject"
+          value="javascript-dj"
+        /> JavaScript-диджей (создание музыки на JavaScript</label>
+
+        <label for="diy-programmer"><input
+          id="diy-programmer"
+          type="checkbox"
+          name="subject"
+          value="diy-programmer"
+        /> Самоделкин-программист (микроконтроллер
+          Micro:bit)</label>
+
+        <label for="web-dev"><input
+          id="web-dev"
+          type="checkbox"
+          name="subject"
+          value="web-dev"
+        /> Создание сайтов (HTML, CSS, Javascript)</label>
+
+        <label for="js-prog"><input
+          id="js-prog"
+          type="checkbox"
+          name="subject"
+          value="js-prog"
+        /> Программирование на JavaScript</label>
+
+        <label for="java-prog"><input
+          id="java-prog"
+          type="checkbox"
+          name="subject"
+          value="java-prog"
+        /> Программирование на Java</label>
+
+        <label for="minecraft-python"><input
+          id="minecraft-python"
+          type="checkbox"
+          name="subject"
+          value="minecraft-python"
+        /> Программирование Minecraft на Python</label>
+
+        <label for="roblox-lua"><input
+          id="roblox-lua"
+          type="checkbox"
+          name="subject"
+          value="roblox-lua"
+        /> Программирование Roblox на Lua</label>
+
+        <label for="it-english"><input
+          id="it-english"
+          type="checkbox"
+          name="subject"
+          value="it-english"
+        /> IT-английский</label>
+        
+
+        <legend>Ваш ребёнок уже изучает английский язык?</legend>
+        <label for="no"
+          ><input id="no" type="radio" name="english-learning" value="no" class="inline"/>
+          Нет, ещё не начал</label
+        >
+        <label for="yes" 
+          ><input id="yes" type="radio" name="english-learning" value="yes" class="inline" />
+          Да, изучает в школе</label
+        >
+      </fieldset>
+      <fieldset>
+        <legend>Дополнительная информация</legend>
+        <label for="dropdown"
+          >Как вы узнали о Школе программирования "DRONNY"?
+          <select id="dropdown" name="dropdown">
+            <option value=""> --Выберите нужное-- </option>
+            <option value="1">От друзей/знакомых</option>
+            <option value="2">Интернет-сайты</option>
+            <option value="3">Телевидение</option>
+            <option value="4">Газеты</option>
+            <option value="5">Соцсети</option>
+            <option value="6">Другое</option>
+          </select>
+        </label>
+        <label for="textarea"
+          >Ваши комментарии и предложения
+          <textarea
+            id="textarea"
+            rows="3"
+            cols="30"
+            placeholder="Круто! Хочу у вас заниматься!"
+          ></textarea>
+        </label>
+        <label for="terms"
+          ><input type="checkbox" id="terms" value="terms and conditions" /> Я принимаю
+          <a href="#">правила и условия</a> предоставления личной
+          информации</label
+        >
+      </fieldset>
+      <input id="submit" type="submit" value="Отправить" name="submit" />
+    </form>
+  </body>
+</html>
